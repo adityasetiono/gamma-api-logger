@@ -2,6 +2,7 @@
 
 namespace Gamma\ApiLoggerBundle\Listener;
 
+use Gamma\ApiLoggerBundle\Service\LoggerStopwatch;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 
@@ -18,7 +19,7 @@ class TrackDurationListener
      *
      * @param $stopwatchLogger
      */
-    public function __construct($stopwatchLogger)
+    public function __construct(LoggerStopwatch $stopwatchLogger)
     {
         $this->stopwatchLogger = $stopwatchLogger;
     }
@@ -74,6 +75,7 @@ class TrackDurationListener
             $params['FormRequest'] = $this->requestApiContentForm;
         }
         $params['response'] = json_decode($response->getContent(), true);
+        $params['status'] = $response->getStatusCode();
 
         $this->stopwatchLogger->stop($this->getUri(), $params);
     }
