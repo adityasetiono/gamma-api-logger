@@ -1,35 +1,37 @@
 {
-    "name": "gamma/api-logger-bundle",
-    "description": "provides tools for REST API requests logging and profoiling",
-    "keywords": [
-        "api",
-        "rest",
-        "logging",
-        "symfony2"
-    ],
-    "type": "symfony-bundle",
-    "version": "1.0.0",
-    "license": "MIT",
-    "require": {
-        "php": ">=5.3",
-        "symfony/framework-bundle": "~2.3|~3.0"
+  "name": "adityasetiono/api-logger-bundle",
+  "description": "provides tools for REST API requests logging and profiling",
+  "keywords": [
+    "api",
+    "rest",
+    "logging",
+    "symfony2"
+  ],
+  "type": "symfony-bundle",
+  "version": "1.0.0",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.3",
+    "symfony/framework-bundle": "~2.3|~3.0"
+  },
+  "require-dev": {
+    "phpspec/phpspec": "^2.5",
+    "memio/spec-gen": "^0.4"
+  },
+  "authors": [
+    {
+      "name": "SmartGamma",
+      "homepage": "http://smar-gamma.com"
     },
-    "require-dev": {
-        "phpspec/phpspec": "^2.5",
-        "memio/spec-gen": "^0.4"
-    },
-    "authors": [
-        {
-            "name":     "SmartGamma",
-            "homepage": "http://smar-gamma.com"
-        },
-        {
-            "name": "Eugen Kuzmin",
-            "email": "jekccs@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-0": { "Gamma\\ApiLoggerBundle": "" }
-    },
-    "target-dir": "Gamma/ApiLoggerBundle"
+    {
+      "name": "Eugen Kuzmin",
+      "email": "jekccs@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "Gamma\\ApiLoggerBundle": ""
+    }
+  },
+  "target-dir": "Gamma/ApiLoggerBundle"
 }
