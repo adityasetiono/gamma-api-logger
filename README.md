@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/smart-gamma/gamma-api-logger.svg?branch=master)](https://travis-ci.org/smart-gamma/gamma-api-logger)
 
+
 ##About
 
 SmartGamma Symfony2 REST API Logger bundle is a tool that we use to create [SmartGamma Symfony2 REST APIs](http://smart-gamma.com/).It enables detailed logging (possible to separate log) for incomming calls for APIs and tracks the duration, requests and responses body. As additional feature, it allows to profile your APIs and tracks slow API calls.
